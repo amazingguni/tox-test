@@ -2,7 +2,7 @@ language: python
 python:
   - "3.5"
 install: 
-  - pip install -q -U pip setuptools tox  coveralls
+  - pip install -q -U pip setuptools tox
 script: tox
 after_success:
-    coveralls
+  - bash <(curl -s https://codecov.io/bash)
